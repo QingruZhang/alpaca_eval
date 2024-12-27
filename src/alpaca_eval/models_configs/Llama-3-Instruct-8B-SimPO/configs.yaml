@@ -1,10 +1,11 @@
 Llama-3-Instruct-8B-SimPO:
   completions_kwargs:
     batch_size: 900
-    do_sample: true
+    # do_sample: true
     max_new_tokens: 4096
     model_kwargs:
-      dtype: bfloat16
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
     model_name: princeton-nlp/Llama-3-Instruct-8B-SimPO 
     stop_token_ids:
     - 128001

@@ -513,7 +513,7 @@ class BaseAnnotatorJSON(BaseAnnotator):
         elif caching_path is not None:
             logging.warning("Saving_path is given but not 'auto', make sure that it's different for different seeds.")
 
-        if caching_path is not None:
+        if caching_path is not None:    
             self.load_(caching_path)
 
         return caching_path

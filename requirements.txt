@@ -6,4 +6,4 @@ tiktoken>=0.3.2
 fire
 scipy
 patsy
-scikit-learn
+scikit-learn==1.5.0
