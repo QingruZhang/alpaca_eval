@@ -1,0 +1,13 @@
+llama3-8b_ppo-seqrm_lr-1e-07-9e-06_warmup-5_step50:
+  prompt_template: "Llama-3-8B-Tulu-SFT/prompt.txt"
+  fn_completions: "huggingface_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/home/zqingru/DataLog/ppo-fsfairx-seqrm_ultrafeedback_llama3-8b-sft/us-west-2/ppo-reward-seqrm_lr-1e-07-9e-06_warmup-5_bs-128-1024_sample-60908_epoch-2-1_seed9/training_checkpoints/save_checkpoint/global_step50"
+    model_kwargs:
+      torch_dtype: 'float16'
+    max_new_tokens: 2048
+    do_sample: true
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 6
+  pretty_name: "llama3-8b_ppo-seqrm_lr-1e-07-9e-06_warmup-5_step50"

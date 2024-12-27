@@ -1,0 +1,15 @@
+llama3-8b-tulu-sft-ep2_sft-ultrafeedback-gpt4-response_lr-1e-06_epoch-10_vllm:
+  prompt_template: "llama3-8b_ultrafeedback_ppo/prompt_template.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/home/zqingru/DataLog/sft_ultrafeedback-gpt4-response_llama3-8b/llama3-8b-tulu-sft-ep2/us-east-1/sft_lr-1e-06_bs-128_len-2048_sample-9366_epoch-10_seed9/save_checkpoint"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 9
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "llama3-8b-tulu-sft-ep2_sft-ultrafeedback-gpt4-response_lr-1e-06_epoch-10_vllm"

@@ -1,0 +1,15 @@
+llama3-8b_ppo-coherent-seq-sft_lr-1e-08-9e-06_warmup-35_kl-0.05_epoch-2-1_step119_vllm:
+  prompt_template: "llama3-8b_ultrafeedback_ppo/prompt_template.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/home/zqingru/DataLog/ppo_ultrafeedback_llama3-8b/us-west-2/ppo-reward-coherent-seq-sft_lr-1e-08-9e-06_warmup-35_kl-0.05_bs-128-1024_sample-60908_epoch-2-1_seed9_run/save_model"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 9
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "llama3-8b_ppo-coherent-seq-sft_lr-1e-08-9e-06_warmup-35_kl-0.05_epoch-2-1_step119_vllm"

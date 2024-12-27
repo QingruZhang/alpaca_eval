@@ -1,0 +1,15 @@
+mistral-7b-sft-tulu_ppo-ultrafeedback_lr-5e-8_warmup-35_kl-2e-2_step90:
+  prompt_template: "mistral-7b_sft/prompt_template.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/home/zqingru/DataLog/ppo_ultrafeedback_mistral-7b/mistral-7b-sft-tulu-ep2/us-west-2/ppo-coherent-seq-sft_lr-5e-08-9e-06_warmup-35_kl-0.02_bs-128-1024_sample-60908_epoch-2-1_seed9_run/training_checkpoints/save_checkpoint/global_step90"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 9
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "mistral-7b_ppo"

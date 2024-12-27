@@ -1,0 +1,15 @@
+Llama-3-8B_chat-prompt:
+  prompt_template: "llama3-8b_ultrafeedback_ppo/prompt_template.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "meta-llama/Meta-Llama-3-8B"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 9
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "Llama-3-8B_chat-prompt"

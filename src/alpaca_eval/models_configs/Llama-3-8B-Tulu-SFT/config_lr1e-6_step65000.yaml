@@ -1,0 +1,15 @@
+Llama-3-8B-Tulu-SFT-lr1e-6-Step65000:
+  prompt_template: "Llama-3-8B-Tulu-SFT/prompt.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/shopqa-training-fsx-prod-us-east-1/home/zqingru/DataLog/tulu_sft_llama3-8b/sft_lr-1e-06_bs-128_len-2048_sample-300000_epoch-2_seed42/save_checkpoint"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 42
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "Llama-3-8B-Tulu-SFT-lr1e-6-Step65000"

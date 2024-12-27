@@ -1,0 +1,15 @@
+Llama-3-8B-Tulu-SFT-lr2e-5-Step15000:
+  prompt_template: "Llama-3-8B-Tulu-SFT/prompt.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/root/DataLog/tulu_sft_llama3-8b/sft_lr-2e-05_bs-128_len-4096_sample-300000_epoch-2_seed42/save_model/global_step15000"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 42
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "Llama-3-8B-Tulu-SFT-lr2e-5-Step15000"

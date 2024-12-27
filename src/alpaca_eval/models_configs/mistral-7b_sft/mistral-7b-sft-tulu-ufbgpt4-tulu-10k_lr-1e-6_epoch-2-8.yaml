@@ -1,0 +1,15 @@
+mistral-7b-sft-tulu-ufbgpt4-tulu-10k_lr-1e-6_epoch-2-8:
+  prompt_template: "mistral-7b_sft/prompt_template.txt"
+  fn_completions: "vllm_local_completions"
+  completions_kwargs:
+    model_name: "/fsx-Training/home/zqingru/DataLog/sft_mistral-7b/mistral-7b-tulu-sft-ep2/ufbgpt4_gpt4alpaca_openorca_codealpaca_cot_10k/us-west-2/sft_lr-1e-06_bs-128_len-2048_sample-49366_epoch-8_seed9/save_checkpoint"
+    model_kwargs:
+      dtype: 'bfloat16'
+      tokenizer_mode: 'auto'
+    max_new_tokens: 2048
+    # do_sample: true
+    seed: 9
+    temperature: 0.9
+    top_p: 1.0
+    batch_size: 900
+  pretty_name: "mistral-7b_sft"
